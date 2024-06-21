@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="toolbar">
+        <div id="languageSelectors">
+            <select id="sourceLanguageSelect"></select>
+            <button id="translateBtn">
+                Traduire
+            </button>
+            <select id="targetLanguageSelect"></select>
+        </div>
+        <div class="range">
+            <div class="range-slider">
+                <input type="range" 
+                    id="cursorSlider" 
+                    min="0" 
+                    max="100" 
+                    step="1" 
+                    value="0"
+                />
+                <div class = "sliderticks">
+                    <span>S</span>
+                    <span>T</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    
+    <div id="main-content"> <!-- Main content section -->
+        <div id="editor" contenteditable="true">
+            <!-- Contenu éditable pour afficher le texte traduit -->
+            <input type="file" id="fileInput" accept=".txt" style="display: none;">
+        </div>
+    </div>
+
+    <div id="bottom_toolbar">
+        <button id="uploadBtn">Déposer un fichier</button>
+        <button id="downloadBtn">Sauvegarder</button>
+    </div>
+    
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
